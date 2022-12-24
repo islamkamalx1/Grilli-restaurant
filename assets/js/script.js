@@ -110,7 +110,7 @@ const slidePrev = () => {
   updateSliderPos();
 };
 
-heroSliderNextBtn.addEventListener("click", slidePrev);
+heroSliderPrevBtn.addEventListener("click", slidePrev);
 
 /**
  * AUTO SLIDE
@@ -146,9 +146,7 @@ let x, y;
 
 window.addEventListener("mousemove", (e) => {
   x = (e.clientX / window.innerWidth) * 10 - 5;
-  console.log(x);
   y = (e.clientY / window.innerHeight) * 10 - 5;
-  console.log(y);
   // reverse the number eg. 20 -> -20
   x = x - x * 2;
   y = y - y * 2;
