@@ -40,10 +40,11 @@ const toggleNavbar = () => {
 addEventOnElements(navTogglers, "click", toggleNavbar);
 
 /**
- * HEADER
+ * HEADER & BACK TOP BTN
  */
 
 const header = document.querySelector("[data-header]");
+const backTopBtn = document.querySelector("[data-back-top-btn]");
 
 let lastScrollPos = 0;
 
@@ -61,9 +62,11 @@ const hideHeader = () => {
 window.addEventListener("scroll", () => {
   if (window.scrollY >= 50) {
     header.classList.add("active");
+    backTopBtn.classList.add("active");
     hideHeader();
   } else {
     header.classList.remove("active");
+    backTopBtn.classList.remove("active");
   }
 });
 
@@ -145,7 +148,7 @@ window.addEventListener("mousemove", (e) => {
   x = (e.clientX / window.innerWidth) * 10 - 5;
   console.log(x);
   y = (e.clientY / window.innerHeight) * 10 - 5;
-console.log(y);
+  console.log(y);
   // reverse the number eg. 20 -> -20
   x = x - x * 2;
   y = y - y * 2;
