@@ -147,6 +147,7 @@ let x, y;
 window.addEventListener("mousemove", (e) => {
   x = (e.clientX / window.innerWidth) * 10 - 5;
   y = (e.clientY / window.innerHeight) * 10 - 5;
+  
   // reverse the number eg. 20 -> -20
   x = x - x * 2;
   y = y - y * 2;
